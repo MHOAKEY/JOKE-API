@@ -21,8 +21,10 @@ function renderJoke(joke) {
   if (joke.type === "single") {
     let jokeString = `<p>${joke.joke}</p>`;
     jokeCont.innerHTML = jokeString;
-  } else jokeString = `<p>${joke.setup}</p>`;
-  jokeString += `<p>...</p>`;
-  jokeString += `<p>${joke.delivery}</p>`;
-  jokeCont.innerHTML = jokeString;
+  } else {
+    jokeString = `<p>${joke.setup}</p>`;
+    jokeString += `<p>...</p>`;
+    jokeString += `<p>${joke.delivery}</p>`;
+    jokeCont.innerHTML = jokeString;
+  }
 }
